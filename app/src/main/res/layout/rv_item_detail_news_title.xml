@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_3">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=";fadkjf;akdjf;akjdf;akj"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=";adjf;akdf"
+        android:textSize="@dimen/txt_size_small"
+        android:textColor="@color/grey"
+        android:layout_marginTop="@dimen/margin_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=";adjf;akdf"
+        android:textSize="@dimen/txt_size_small"
+        android:textColor="@color/background_blue"
+        android:layout_marginStart="@dimen/margin_4"
+        android:paddingTop="@dimen/margin_1"
+        android:drawableStart="@drawable/ic_comment_blue"
+        app:layout_constraintTop_toTopOf="@id/tvTime"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        app:layout_constraintBottom_toBottomOf="@id/tvTime"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_marginTop="@dimen/margin_4"
+        android:paddingTop="@dimen/margin_2"
+        android:paddingBottom="@dimen/margin_2"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Autor: "
+            android:textSize="@dimen/txt_size_small"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ime i prezime"
+            android:textSize="@dimen/txt_size_small"
+            android:layout_marginStart="@dimen/margin_1"
+            android:textColor="@color/background_blue"
+            app:layout_constraintTop_toTopOf="@id/tvAutor"
+            app:layout_constraintBottom_toBottomOf="@id/tvAutor"
+            app:layout_constraintStart_toEndOf="@id/tvAutor"/>
+
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Izvor: "
+            android:textSize="@dimen/txt_size_small"
+            android:textColor="@color/grey"
+            android:layout_marginStart="@dimen/margin_large"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/tvName"/>
+
+        <TextView
+            android:id="@+id/tvSourceName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Index.hr"
+            android:textSize="@dimen/txt_size_small"
+            android:layout_marginStart="@dimen/margin_1"
+            android:textColor="@color/background_blue"
+            app:layout_constraintTop_toTopOf="@id/tvAutor"
+            app:layout_constraintBottom_toBottomOf="@id/tvAutor"
+            app:layout_constraintStart_toEndOf="@id/tvSource"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

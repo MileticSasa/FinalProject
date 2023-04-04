@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.WeatherActivity"
+    android:background="@color/background_blue"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_4"
+        android:padding="@dimen/margin_4"
+        android:background="@drawable/weather_background">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_2"
+            android:text="Grad"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/txt_size_medium"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_marginStart="@dimen/margin_large"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="43"
+            android:textSize="@dimen/txt_size_largest"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/margin_4"
+            app:layout_constraintTop_toTopOf="@id/iv"
+            app:layout_constraintBottom_toBottomOf="@id/iv"
+            app:layout_constraintStart_toEndOf="@id/iv"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_circle_big"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/margin_4"
+            android:layout_marginStart="@dimen/margin_1"
+            app:layout_constraintTop_toTopOf="@id/tvTemp"
+            app:layout_constraintStart_toEndOf="@id/tvTemp"/>
+
+        <TextView
+            android:id="@+id/tvDescr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="description"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/background_blue"
+            android:layout_margin="@dimen/margin_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vlažnost"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescr"/>
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="86"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin_3"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintTop_toBottomOf="@id/tvDescr"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vetar"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1"/>
+
+        <TextView
+            android:id="@+id/tvWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="86"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/margin_3"
+            app:layout_constraintStart_toEndOf="@id/tv2"
+            app:layout_constraintTop_toTopOf="@id/tv2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m/s"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/margin_1"
+            app:layout_constraintStart_toEndOf="@id/tvWind"
+            app:layout_constraintTop_toTopOf="@id/tv2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/weather_background"
+        android:layout_margin="@dimen/margin_4"
+        android:padding="@dimen/margin_4">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

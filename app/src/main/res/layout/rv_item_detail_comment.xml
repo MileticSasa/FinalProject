@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_2"
+            android:text="OSTAVI KOMENTAR"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:drawableEnd="@drawable/ic_add"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/typeCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llHeader"
+        app:layout_constraintBottom_toTopOf="@id/rv"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_small"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:hint="Unesite svoje ime"/>
+
+        <EditText
+            android:id="@+id/etComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_small"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:hint="Komentar..."/>
+
+        <TextView
+            android:id="@+id/tvSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Objavi "
+            android:textColor="@color/dark_blue"
+            android:textSize="12sp"
+            android:layout_gravity="end"
+            android:drawableEnd="@drawable/ic_send"
+            android:layout_marginTop="@dimen/margin_2"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingBottom="@dimen/margin_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeCommentLayout"
+        app:layout_constraintBottom_toTopOf="@id/llFooter"/>
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/dark_blue"
+        android:layout_marginBottom="@dimen/margin_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SVI KOMENTARI"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:padding="@dimen/margin_2"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:padding="@dimen/margin_2"
+            android:drawableStart="@drawable/ic_comment"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

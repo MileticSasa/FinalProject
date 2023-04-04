@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_1">2dp</dimen>
+    <dimen name="margin_2">5dp</dimen>
+    <dimen name="margin_3">7dp</dimen>
+    <dimen name="margin_4">10dp</dimen>
+    <dimen name="margin_5">14dp</dimen>
+    <dimen name="margin_very_large">45dp</dimen>
+    <dimen name="margin_large">25dp</dimen>
+    <dimen name="margin_large_2">30dp</dimen>
+    <dimen name="txt_size_large">30sp</dimen>
+    <dimen name="txt_size_largest">32sp</dimen>
+    <dimen name="txt_size_medium">24sp</dimen>
+    <dimen name="txt_size_small">14sp</dimen>
+    <dimen name="bottom_image_size">22dp</dimen>
+</resources>

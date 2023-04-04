@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    android:layout_marginTop="@dimen/margin_3"
+    android:layout_marginBottom="@dimen/margin_3">
+
+    <ImageView
+        android:id="@+id/ivFb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/facebook_color"
+        android:layout_weight="1"
+        android:src="@drawable/face"
+        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginEnd="@dimen/margin_1"/>
+
+    <ImageView
+        android:id="@+id/ivV"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/viber_color"
+        android:layout_weight="1"
+        android:src="@drawable/viber"
+        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginEnd="@dimen/margin_1"/>
+
+    <ImageView
+        android:id="@+id/ivWp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/whatsapp_color"
+        android:layout_weight="1"
+        android:src="@drawable/whatsapp"
+        android:padding="@dimen/margin_3"
+        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginEnd="@dimen/margin_1"/>
+
+    <ImageView
+        android:id="@+id/ivIn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/instagram_color"
+        android:layout_weight="1"
+        android:src="@drawable/instagram"
+        android:padding="@dimen/margin_2"
+        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginEnd="@dimen/margin_1"/>
+
+    <ImageView
+        android:id="@+id/ivTw"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/twitter_color"
+        android:layout_weight="1"
+        android:src="@drawable/twitter"
+        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginEnd="@dimen/margin_1"/>
+
+</LinearLayout>

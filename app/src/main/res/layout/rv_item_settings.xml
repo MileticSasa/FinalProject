@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background_blue"
+    android:layout_marginTop="@dimen/margin_4"
+    android:layout_marginBottom="@dimen/margin_4">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="PUSH NOTIFIKACIJE"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="MARKETING"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="USLOVI KORIŠĆENJA"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="KONTAKT"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="@color/transparent"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_very_large"
+        android:layout_marginEnd="@dimen/margin_very_large"
+        android:layout_marginBottom="@dimen/margin_4">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/fb_blue_background"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/insta_blue_background"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/twit_blue_background"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/viber_blue_background"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/wa_blue_background"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+</LinearLayout>

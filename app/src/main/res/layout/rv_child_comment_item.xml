@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:layout_marginTop="@dimen/margin_3"
+    android:layout_marginBottom="@dimen/margin_3">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=";askfjdsa;k"
+        android:textColor="@color/background_blue"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date and time"
+        android:textSize="12sp"
+        android:layout_marginEnd="@dimen/margin_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvName"
+        app:layout_constraintBottom_toBottomOf="@id/tvName"/>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvSee" />
+
+    <TextView
+        android:id="@+id/tvSee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vidi odgovore"
+        android:layout_marginTop="@dimen/margin_2"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/tvText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imgRep"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/margin_3"
+        android:layout_marginBottom="@dimen/margin_3"
+        android:layout_marginStart="@dimen/margin_2"
+        android:src="@drawable/reply_solid2"
+        app:layout_constraintTop_toTopOf="@id/tvRep"
+        app:layout_constraintBottom_toBottomOf="@id/tvRep"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odgovori"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/margin_4"
+        app:layout_constraintStart_toEndOf="@id/imgRep"
+        app:layout_constraintTop_toTopOf="@id/btnMinus"
+        app:layout_constraintBottom_toBottomOf="@id/btnMinus"/>
+
+    <TextView
+        android:id="@+id/tvPositiveVotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/margin_2"
+        app:layout_constraintTop_toTopOf="@id/btnPlus"
+        app:layout_constraintBottom_toBottomOf="@id/btnPlus"
+        app:layout_constraintEnd_toStartOf="@id/btnPlus"/>
+
+    <ImageButton
+        android:id="@+id/btnPlus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/thumbs_up_2x"
+        android:padding="@dimen/margin_2"
+        android:scaleType="fitCenter"
+        android:background="@drawable/btn_round"
+        android:layout_marginEnd="@dimen/margin_3"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMinus"
+        app:layout_constraintEnd_toStartOf="@+id/tvNegativeVotes"
+        app:layout_constraintTop_toTopOf="@+id/btnMinus" />
+
+    <TextView
+        android:id="@+id/tvNegativeVotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginEnd="@dimen/margin_2"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMinus"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus"
+        app:layout_constraintTop_toTopOf="@+id/btnMinus" />
+
+    <ImageButton
+        android:id="@+id/btnMinus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="@dimen/margin_3"
+        android:background="@drawable/btn_round"
+        android:padding="@dimen/margin_2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/thumbs_down_2x"
+        app:layout_goneMarginEnd="@dimen/margin_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+    <LinearLayout
+        android:id="@+id/typeCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMinus"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_small"
+            android:hint="Unesite svoje ime"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_small"
+            android:hint="Komentar..."
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Objavi "
+            android:textColor="@color/dark_blue"
+            android:textSize="12sp"
+            android:layout_gravity="end"
+            android:drawableEnd="@drawable/ic_send"
+            android:layout_marginTop="@dimen/margin_2"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv"
+        android:layout_marginStart="@dimen/margin_very_large"
+        android:paddingTop="@dimen/margin_3"
+        app:layout_constraintTop_toBottomOf="@id/typeCommentLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_marginTop="@dimen/margin_4"
+    android:layout_marginBottom="@dimen/margin_4">
+
+    <TextView
+        android:id="@+id/tvVreme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="VREMENSKA PROGNOZA"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+    <TextView
+        android:id="@+id/tvKurs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="KURSNA LISTA"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+    <TextView
+        android:id="@+id/tvHoroskop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="HOROSKOP"
+        android:textColor="@color/light_grey"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:textSize="@dimen/txt_size_medium"/>
+
+</LinearLayout>
